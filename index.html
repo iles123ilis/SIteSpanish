@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Hablar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="StyleSheet1.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <!-- Вверх слева: Выпадающее меню с выбором времен -->
+    <div class="dropdown-container">
+        <button id="dropdown-btn" class="dropdown-btn">⚙️ Выбрать времена ▼</button>
+        <div id="dropdown-menu" class="dropdown-menu">
+            <h4>Времена для изучения:</h4>
+            <label><input type="checkbox" name="tense" value="presente" checked> Presente</label>
+            <label><input type="checkbox" name="tense" value="indefinido"> Pretérito Indefinido</label>
+            <label><input type="checkbox" name="tense" value="imperfecto"> Pretérito Imperfecto</label>
+            <label><input type="checkbox" name="tense" value="futuro"> Futuro Simple</label>
+            <label><input type="checkbox" name="tense" value="condicional"> Condicional Simple</label>
+        </div>
+    </div>
+
+    <!-- Вверх справа: Кнопка справочника -->
+    <button id="help-btn" class="help-btn">📖 Справочник</button>
+
+    <h1>Hablar</h1>
+
+    <div class="card">
+        <div class="card-top">
+            <p id="card-pronoun">Yo</p>
+            <span id="card-tense-tag" class="tense-tag">Presente</span>
+        </div>
+        <div class="card-bottom">
+            <input type="text" id="user-input" placeholder="Type your answer...">
+            <button id="check-btn">Check</button>
+            <div id="result-message" class="message"></div>
+        </div>
+    </div>
+
+    <div class="score-card">
+        <span class="correct">Correct: <span id="correct-count">0</span></span>
+        <span class="divider">|</span>
+        <span class="incorrect">Incorrect <span id="incorrect-count">0</span></span>
+    </div>
+
+    <!-- Модальное окно справочника (справа сверху) -->
+    <div id="modal-popup" class="modal-popup">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <h3>Справочник спряжений</h3>
+            <div id="modal-tense-container"></div>
+        </div>
+    </div>
+
+    <script src="Script1.js"></script>
+</body>
+</html>
